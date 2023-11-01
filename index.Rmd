@@ -8,7 +8,7 @@ output:
 ---
 
 <p>Hi! My name is Jingyi Xu. *Welcome to my website!*</p>
-<p>You can find my [email](mailto:<jx2562@cumc.columbia.edu>), [github](http://github.com/xjyes/), and [linkedin](https://www.linkedin.com/in/jingyi-xu-60834624b/) on the upper right conner of this page. Other than that, my resume is presented in the [About](about.html) section. You can always go back to this page by clicking the [Home](index.html) button on the upper left corner. *Nice to meet you!*</p>
+<p>You can find my [email](mailto:<jx2562@cumc.columbia.edu>), [github](http://github.com/xjyes/), and [linkedin](https://www.linkedin.com/in/jingyi-xu-60834624b/) on the upper right conner of this page. Other than that, my resume is presented in the [About](about.html) section. An example of my data analysis and visualization skills is presented in the [Plotly](plotly.html) and [Flexdashboard](flexdashboard.html) sections. You can always go back to this page by clicking the [Home](index.html) button on the upper left corner. *Nice to meet you!*</p>
 <br>
 
 

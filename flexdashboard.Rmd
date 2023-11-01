@@ -1,0 +1,61 @@
+---
+title: "NYC Restaurant Inspection"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+library(lubridate)
+data("rest_inspec")
+```
+
+You can go back to the [Home](index.html) page here!
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Count of Grade A restaurants in different cuisines
+
+```{r}
+gradeA_cuisine = rest_inspec |>
+  filter(grade == "A") |>
+  group_by(cuisine_description) |>
+  summarise(count = n()) |>
+  plot_ly(x = ~cuisine_description, y = ~count, color = ~cuisine_description, type = "bar", colors = "viridis")
+
+gradeA_cuisine
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Count of Grade A restaurants inspected in different year-month
+
+```{r}
+year_count = rest_inspec |>
+  filter(grade == "A") |>
+  mutate(inspection_date = as.Date(inspection_date),
+         year_month = format(inspection_date, format = "%Y-%m")) |>
+  group_by(year_month) |>
+  summarise(count = n())  |>
+  plot_ly(x = ~year_month, y = ~count, color = ~year_month, type = "scatter", mode = "markers", colors = "viridis")
+
+year_count
+```
+
+### The restaurant score in respect to different boroughs
+
+```{r}
+boro_score = rest_inspec |>
+  drop_na(score, boro) |>
+  mutate(boro = fct_reorder(boro, score)) |>
+  plot_ly(x = ~boro, y = ~score, color = ~boro, type = "box", colors = "inferno")
+
+boro_score
+```

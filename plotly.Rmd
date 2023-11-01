@@ -1,0 +1,57 @@
+---
+title: "Plotly by NYC Restaurant Inspection"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cosmo
+---
+
+</p>This page aims to discover the patterns of NYC restaurant inspection. I will tidy the "rest_inspec" data and draw a bar plot, a scatter plot, and a box chart regarding to the dataset using plotly package. This page is all about the codes, The plots will be shown in the [flexdashboard](flexdashboard.html) section.</p>
+<br>
+
+```{r, message=FALSE}
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+library(lubridate)
+data("rest_inspec")
+```
+
+Here is the code for the bar chart. It shows the count of Grade A restaurants in different cuisines. 
+
+```{r}
+gradeA_cuisine = rest_inspec |>
+  filter(grade == "A") |>
+  group_by(cuisine_description) |>
+  summarise(count = n()) |>
+  plot_ly(x = ~cuisine_description, y = ~count, color = ~cuisine_description, type = "bar", colors = "viridis")
+
+gradeA_cuisine
+```
+
+Here is the code for the scatter plot. It shows the count of Grade A restaurants inspected in different year-month.
+```{r}
+year_count = rest_inspec |>
+  filter(grade == "A") |>
+  mutate(inspection_date = as.Date(inspection_date),
+         year_month = format(inspection_date, format = "%Y-%m")) |>
+  group_by(year_month) |>
+  summarise(count = n())  |>
+  plot_ly(x = ~year_month, y = ~count, color = ~year_month, type = "scatter", mode = "markers", colors = "viridis")
+
+year_count
+  
+```
+
+Here is the code for the box plot. It gives the information about the restaurant score in respect to different boroughs.
+
+```{r}
+boro_score = rest_inspec |>
+  drop_na(score, boro) |>
+  mutate(boro = fct_reorder(boro, score)) |>
+  plot_ly(x = ~boro, y = ~score, color = ~boro, type = "box", colors = "inferno")
+
+boro_score
+```
+
