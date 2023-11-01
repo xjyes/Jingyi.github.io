@@ -1,0 +1,75 @@
+---
+title: "Academic and professional experience"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cosmo
+    css: styles.css
+      
+---
+<style>
+  .section {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 10px 0;
+  }
+</style>
+
+<div class="section">
+  <h2>Education</h2>
+  <p>**Columbia University, Mailman School of Public Health**</p>
+  
+  <p>*   Master of Science in Biostatistics</p>
+  
+  <p>**The Chinese University of Hong Kong, Shenzhen **</p>
+  
+  <p>*   Bachelor of Science in Bioinformatics </p>
+  
+</div>
+
+<div class="section">
+  <h2>Skills and Tools</h2>
+  <p>**Programming skills: **Model building with Python, data analysis with R, algorithm implementation with C++, and model building with MATLAB</p>
+  <p>**Bioinformatics Tools: **Protein structure visualization with Chimera, and sequence alignment with BLAST</p>
+</div>
+
+<div class="section">
+  <h2>Research Experiences</h2>
+  <p>**Research Assistant to Prof. Hsien-Da Huang, CUHKSZ Warshel Institute of Computational Biology** 03/2023-Present
+  
+  <p>*    Integrated data from EcoCyc, STRING, and RegulonDB to construct a comprehensive E. coli regulation network</p>
+  
+  <p>*    Developed and implemented a network-based algorithm to successfully identify upstream regulators of E. coli during anaerobic processes using time series microarray expression data 
+  
+  <p>**Bioinformatics Analysis Intern, Tumor Division, BGI Genomics  **04/2023-07/2023
+  
+  <p>*    Built a random forest model to filter the false mutations appearing during the Whole Genome Sequencing by enzyme digestion method and integrated it into the WGS workflow with precision and recall greater than 99%</p>
+  
+  <p>*    Minimize the features in a random forest model from over 1000 to 64 for a MSI detection panel by recursive feature elimination, resulting in significant reduction in NGS cost and customization of a new panel with fewer genes.
+  
+  <p>**Research Assistant to Prof. Lee Tzong-Yi, CUHKSZ Warshel Institute of Computational Biology **09/2021-09/2022
+  
+  <p>*    Used Python for a baseline model to predict the sequences of antimicrobial peptides and identify their target microbes: extracted the basic characteristics of protein such as AAC and CKSAAGP, and trained a random forest model for prediction; plotted the ROC Curve and evaluate the AUC of the model</p>
+  
+  <p>*    Compared a newly built transformer neural network model with deep learning models trained by other teams as references in order to achieve a higher prediction rate. 
+  
+  <p>**Visiting Student, Institute of Cancer Research, Shenzhen Bay Laboratory  **06/2022-09/2022
+  
+  <p>*    Performed data mining on clinical data of patients to identify associated cancer types in tumor brain metastasis.</p>
+  
+  <p>*    Conducted R-based multi-cohort differential gene expression analysis using sequencing data from GEO for brain metastasis sites, integrated the results using Robust Rank Aggregation and performed pathway analysis using GSEA. 
+  
+  <p>*    Utilized the obtained data for R-based immune infiltration analysis, investigating the proportions of different immune cell types in brain metastasis sites and primary sites. Visualized the results through pie charts.</p>
+</div>
+
+<div class="section">
+  <h2>Papers and Publications</h2>
+  <p>Pang, Y., Yao, L., **Xu, J.**, Wang, Z., & Lee, T.-Y. (2022). Integrating transformer and imbalanced multi-label learning to identify antimicrobial peptides and their functional activities. Bioinformatics, 38(24), 5368–5374.                 
+</div>
+
+<div class="section">
+  <h2>Extracurricular Roles</h2>
+  <p>**Captain, Basketball Team of CUHKSZ, Diligentia College** 02/2021-05/2023
+  <p>**Project Manager, Shimmer Charity in CUHKSZ** 09/2019-04/2022</p>
+</div>

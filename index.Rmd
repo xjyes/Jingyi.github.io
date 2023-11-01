@@ -1,0 +1,27 @@
+---
+title: "**Jingyi's personal website**"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cosmo
+---
+
+<p>Hi! My name is Jingyi Xu. *Welcome to my website!*</p>
+<p>You can find my [email](mailto:<jx2562@cumc.columbia.edu>), [github](http://github.com/xjyes/), and [linkedin](https://www.linkedin.com/in/jingyi-xu-60834624b/) on the upper right conner of this page. Other than that, my resume is presented in the [About](about.html) section. You can always go back to this page by clicking the [Home](index.html) button on the upper left corner. *Nice to meet you!*</p>
+<br>
+
+
+<div style="display: flex; flex-direction: row;">
+  <div style="flex: 1;"><img src="images/28115DE4-C365-43FB-A461-3567E59844FD_1_105_c.jpeg" style="width:90%;">
+  </div>
+  <div style="flex: 2;"><p>**Name:** Jingyi Xu</p><p>**Gender:** Female</p><p>**Education:**<p> 
+      Columbia University (MS in Biostatistics)<br>
+      The Chinese University of Hong Kong, Shenzhen (BS in Bioinformatics)
+    </p><p>**Hobbies:** Play the basketball, exchange postcards, watch movies</p> 
+  </div>
+</div>
+
+<br>
+<p> This website includes my personal information such as my contacts and academic experience. Also, I'm interesed in making friends with shared hobbies.
+
